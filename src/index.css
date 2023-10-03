@@ -1,13 +1,153 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: linear-gradient(rgba(22, 21, 21, 0.2), rgba(21, 21, 21, 0.1)), url('assets/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dark-mode {
+	background-image: linear-gradient(rgba(22, 21, 21, 0.8), rgba(21, 21, 21, 0.7)), url('assets/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode h1 {
+	color: white;
+}
+
+.container {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	min-height: 100vh;
+}
+
+.notes-list {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
+}
+
+.note.new {
+	background-color: #F2DFCE;
+}
+
+textarea {
+	border: none;
+	resize: none;
+	background-color: #F2DFCE;
+	color: #59252E;
+	font-weight: bold;
+	font-size: large;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.btn-save {
+	background-color: #59252E;
+	color: #ededed;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+}
+
+.btn-save:hover {
+	background-color: #cbc2c2;
+	cursor: pointer;
+	color: black;
+}
+
+.btn-toggle {
+	background-color: #FFFB6C;
+	color: #090909;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+}
+
+.btn-toggle:hover {
+	background-color: #F2B6B6;
+	cursor: pointer;
+	color: black;
+}
+
+.note {
+	background-color: #F2F2F2;
+	border-radius: 10px;
+	padding: 1rem;
+	min-height: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	white-space: pre-wrap;
+}
+
+.note-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.date {
+	color: #011640;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.text {
+	color: #F2226E;
+	font-weight: bold;
+}
+
+.delete-icon {
+	cursor: pointer;
+	border-radius: 50px;
+	padding: 8px;
+	color: #731F26;
+}
+
+.delete-icon:hover {
+	background-color: #F2DFCE;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	background-color: rgb(233, 233, 233);
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 1.5em;
+}
+
+.search input {
+	border: none;
+	background-color: rgb(233, 233, 233);
+	width: 100%;
+}
+
+.search input:focus {
+	outline: none;
 }
